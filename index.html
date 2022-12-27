@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Google meet </title>
+    <link rel="stylesheet" href="public/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    
+
+     <main class="container-fluid d-flex flex-column home-wrap">
+        <div class="g-top text-light">
+            <div class="top-remote-video-show-wrap d-flex">
+                    <div class="call-wrap" style="background-color: black;">
+                        <div class="video-wrap" id="divUsers" style="display: flex; flex-wrap: wrap;">
+                        
+                            <div id="me" class="userbox display-center flex-column">
+                                <h2 class="display-center" style="font-size: 14px;">   </h2>
+                                <div class="display-center">
+                                    <video autoplay muted id="localVideoPlayer">
+
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div id="otherTemplate" class="userbox display-center flex-column" style="display: none;">
+                                <h2 class="display-center" style="font-size: 14px;">   </h2>
+                                <div class="display-center">
+                                    <video autoplay muted></video>
+                                    <audio autoplay controls muted" style="display: none;"></audio>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+            </div>
+
+            <div class="g-top-left bg-light text-secondary w-25 d-flex align-items-center justify-content-between pl-2 pr-2">
+                   
+            </div>
+
+        </div>
+
+
+        <div class="g-bottom">
+
+        </div>
+     </main>
+
+</body>
+</html>

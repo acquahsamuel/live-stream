@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Create or join Meeting </title>
+    <link rel="stylesheet" href="public/Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body style="padding-top: 3.5rem;">
+
+    <nav class="navbar navbar-expand-md fixed-top">
+        <img src="public/Assets/images/google-meet-icon.png" class="logo" alt="logo" srcset="">
+        <a href="#" class="navbar-brand text-dark"> Live stream </a>
+
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> At a glance </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> How it work </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"> Plan and Price </a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav mr-0">
+                <li class="nav-item sign-in display-center">
+                    <a href="#" class="nav-link"> Sign in</a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold join-meeting"> Join the meeting
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-outline-secondary btn-lg text-info font-weight-bold new-meeting"> Start a meeting
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+
+    <main >
+        <div class="jumbotron h-100 d-flex ">
+            <div class="container w-50">
+                <h1 style="font-size: 3rem;"> Premium video meeting. Not it is available for free to everyone </h1>
+                <p>
+                    We're designing the Google meeting service for secure bussines meetings and making it free for
+                    everyone to use
+                </p>
+
+                <ul class="display-center justify-content-start">
+                    <li style="padding: 0;">
+                        <button 
+                        style="background-color: #01796b;"
+                        class="btn btn-lg text-light font-weight-bold display-center new-meeting"> <span class="material-icons mr-2"> video_call </span> New Meeting </button>
+                       
+                    </li>
+                    <li class="pl-3">
+                        <button 
+                        style="background-color: #ffffff;"
+                        class="btn btn-lg btn-outline-secondary text-dark font-weight-bold display-center"> <span class="material-icons mr-2"> keyboard </span>
+                        <input type="text" placeholder="Enter a code" class="enter-code" style="border: none; outline: none;">
+                    </button>
+                    </li>
+
+                    <li class="text-dark font-weight-bold cusor-pointer pl-2 join-action"> Join </li>
+
+                </ul>
+
+            </div>
+            <div class="container w-50">
+                <img src="public/Assets/images/google-meet-people.jpg" class="signin-image" alt="">
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <footer class="container">
+        <h6> Lear more about <span class="learn-more text-info"> google meet </span> </h6>
+
+    </footer>
+
+
+
+    <script src="public/Assets/js/jquery-3.4.1.min.js"></script>
+    <script>
+         $(function(){
+
+
+            $(document).on('click', '.join-meeting' , () =>{
+                $('.enter-code').focus();
+            })
+
+            $(document).on('click', '.join-action' , () =>{
+                $('.enter-code').focus();
+                let join_value = $('.enter-code').val();
+                let meetingUrl = window.location.origin+ "?join-meeting-id="+join_value;
+                window.location.replace(meetingUrl);
+            })
+
+
+            $(document).on('click', '.new-meeting', () =>{
+                let randomId = Math.floor(Math.random() * 100000000);
+                let meetingUrl = window.location.origin+ "?start-new-meeting-id="+randomId;
+                window.location.replace(meetingUrl);
+            })
+         })
+    </script>
+
+</body>
+
+</html>
